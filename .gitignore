@@ -1,0 +1,41 @@
+# Virtual Environment
+venv/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit Secrets
+.streamlit/secrets.toml
+
+# User Generated Reports
+reports/*.pdf
+
+# Model Cache
+saved_models/__pycache__/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# Temporary
+*.tmp
+
+# Project Structure
+project_structure.txt

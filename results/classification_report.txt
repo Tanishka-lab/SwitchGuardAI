@@ -1,0 +1,11 @@
+                       precision    recall  f1-score   support
+
+             Critical       0.97      0.96      0.96       274
+  Maintenance_Overdue       0.81      0.88      0.85      1073
+Mechanical_Resistance       0.88      0.92      0.90       173
+               Normal       0.99      0.99      0.99     18271
+             Overheat       0.93      0.88      0.90       209
+
+             accuracy                           0.98     20000
+            macro avg       0.92      0.93      0.92     20000
+         weighted avg       0.98      0.98      0.98     20000
