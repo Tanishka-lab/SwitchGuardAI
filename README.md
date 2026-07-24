@@ -313,11 +313,9 @@ The pipeline performs:
 
 # 👩‍💻 Developer
 
-**Tanishka**
+**Tanishka Trehan**
 
 B.Tech Information Technology
-
-JSS Academy of Technical Education, Noida
 
 ---
 
