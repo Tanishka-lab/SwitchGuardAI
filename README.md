@@ -321,4 +321,4 @@ B.Tech Information Technology
 
 # 📜 License
 
-This project is developed for educational and research purposes.
+This project is developed for educational and research purposes.You are free to use, modify, and distribute this software under the terms of the MIT License.
