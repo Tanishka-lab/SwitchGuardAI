@@ -22,7 +22,10 @@ Project : SwitchGuardAI
 
 import subprocess
 import sys
+import os
 
+# Always run commands from the project root
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 def run_step(title, command):
 
@@ -30,7 +33,7 @@ def run_step(title, command):
     print(title)
     print("=" * 70)
 
-    result = subprocess.run(command)
+    result = subprocess.run(command, cwd=PROJECT_ROOT)
 
     if result.returncode != 0:
         print(f"\n❌ {title} Failed")
@@ -48,43 +51,43 @@ def main():
     # STEP 1
     run_step(
         "STEP 1 : Dataset Generation",
-        ["python", "simulation/data_generator.py"]
+        [sys.executable, "-m" ,"simulation.data_generator"]
     )
 
     # STEP 2
     run_step(
         "STEP 2 : Exploratory Data Analysis",
-        ["python", "analysis/eda.py"]
+        [sys.executable, "-m" ,"analysis.eda"]
     )
 
     # STEP 3
     run_step(
         "STEP 3 : Data Preprocessing",
-        ["python", "preprocess_data.py"]
+        [sys.executable, "preprocess_data.py"]
     )
 
     # STEP 4
     run_step(
         "STEP 4 : Feature Engineering",
-        ["python", "feature_pipeline.py"]
+        [sys.executable, "feature_pipeline.py"]
     )
 
     # STEP 5
     run_step(
         "STEP 5 : Model Training",
-        ["python", "models/train_model.py"]
+        [sys.executable,"-m" , "models.train_model"]
     )
 
     # STEP 6
     run_step(
         "STEP 6 : Model Evaluation",
-        ["python", "models/evaluate_model.py"]
+        [sys.executable,"-m" , "models.evaluate_model"]
     )
 
     # STEP 7
     run_step(
         "STEP 7 : Explainable AI",
-        ["python", "models/explain_model.py"]
+        [sys.executable,"-m" , "models.explain_model"]
     )
 
     print("\n" + "=" * 70)

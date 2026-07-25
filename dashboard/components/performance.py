@@ -95,22 +95,22 @@ between different fault conditions.
 
     c1.metric(
         "Accuracy",
-        f"{accuracy*100:.2f}%"
+        f"{accuracy*100:.3f}%"
     )
 
     c2.metric(
         "Precision",
-        f"{precision*100:.2f}%"
+        f"{precision*100:.3f}%"
     )
 
     c3.metric(
         "Recall",
-        f"{recall*100:.2f}%"
+        f"{recall*100:.3f}%"
     )
 
     c4.metric(
         "F1 Score",
-        f"{f1*100:.2f}%"
+        f"{f1*100:.3f}%"
     )
 
     st.divider()
@@ -268,7 +268,10 @@ between different fault conditions.
 
     st.subheader("📝 Model Interpretation")
 
-    top_feature = importance.iloc[0]["Feature"]
+    if not importance.empty:
+       top_feature = importance.iloc[0]["Feature"]
+    else:
+       top_feature = "N/A"
 
     st.info(f"""
 ### Model Overview
