@@ -110,7 +110,7 @@ The model predicts:
     st.subheader("👩‍💻 Developer")
 
     st.success("""
-**Developer:** Tanishka
+**Developer:** Tanishka Trehan
 
 **Project:** SwitchGuardAI
 
