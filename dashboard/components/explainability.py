@@ -182,6 +182,12 @@ the sensor readings responsible for every prediction using
     # =====================================================
 
     st.subheader("SHAP Waterfall Plot")
+    
+    plt.close("all")   # <-- ADD THIS: clears any leftover figures from a
+                        # previous run that may have crashed before reaching
+                        # plt.close() further down, which can leave stale
+                        # matplotlib state that causes this exact intermittent
+                        # IndexError in shap's waterfall renderer
 
     waterfall_exp = shap.Explanation(
 
